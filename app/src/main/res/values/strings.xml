@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">ECommerce App</string>
+    <string name="products">Products</string>
+    <string name="prodname">Product Name</string>
+    <string name="price">$0.00</string>
+    <string name="prices">$10.00</string>
+    <string name="category">Category</string>
+    <string name="stock">Stock: 0</string>
+    <string name="desc">Description</string>
+    <string name="desc_prd">Product Description</string>
+    <string name="cart">Cart</string>
+    <string name="add_to_cart">Add to Cart</string>
+    <string name="total">Total</string>
+    <string name="subtotal">Subtotal</string>
+    <string name="shipping">Shipping</string>
+    <string name="checkout">Checkout</string>
+    <string name="retry">Retry</string>
+    <string name="cart_empty">Cart is empty</string>
+    <string name="delete">Delete All</string>
+    <string name="cart_empty_desc">Add Product to Cart</string>
+    <string name="failed_load_products">Failed to load products</string>
+    <string name="all_products">All Products</string>
+    <string name="search">Search product…</string>
+    <string name="num">1</string>
+
+
+    <string name="prof">Profile</string>
+    <string name="name">Riza Zamzami</string>
+    <string name="role">Mobile Developer</string>
+    <string name="mail">rizazamzami12@gmail.com</string>
+    <string name="phone">(+62) 82242474378</string>
+    <string name="loc">Jakarta, Indonesia</string>
+</resources>
