@@ -21,8 +21,6 @@ public class ProductRepository {
     ) {
         MutableLiveData<Resource<List<Product>>> result = new MutableLiveData<>();
         result.setValue(Resource.loading(null));
-
-        // 🔥 SIMULASI ERROR 500 (SEBELUM API DIPROSES)
         if (error) {
             result.postValue(
                     Resource.error("500 Internal Server Error", null)
