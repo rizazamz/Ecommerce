@@ -15,8 +15,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
-public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductViewHolder> {  // ← Tambahkan <ProductAdapter.ProductViewHolder>
-    private List<Product> products = new ArrayList<>();  // ← Tambahkan <Product>
+public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductViewHolder> {  
+    private List<Product> products = new ArrayList<>();  
     private OnProductClickListener listener;
 
     public interface OnProductClickListener {
@@ -27,7 +27,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
         this.listener = listener;
     }
 
-    public void setProducts(List<Product> products) {  // ← Tambahkan <Product>
+    public void setProducts(List<Product> products) {  
         this.products = products;
         notifyDataSetChanged();
     }
