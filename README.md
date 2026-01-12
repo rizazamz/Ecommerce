@@ -57,25 +57,6 @@ Mockito 5.12.0
 Architecture Testing
 MockWebServer
 
-
-🗂️ Project Structure
-com.riza.ecommerce/
-├── data/
-│   ├── local/          (Room Database)
-│   ├── remote/         (Retrofit API)
-│   └── repository/     (Data coordination)
-├── domain/
-│   └── model/          (Business entities)
-├── presentation/
-│   ├── splash/
-│   ├── product/        (Home & ViewModel)
-│   ├── detail/         (Detail & ViewModel)
-│   ├── cart/           (Cart & ViewModel)
-│   ├── profile/
-│   └── adapter/        (RecyclerView adapters)
-└── utils/
-    └── Resource.java   (API state wrapper)
-
 🚀 Getting Started
 Prerequisites:
 
