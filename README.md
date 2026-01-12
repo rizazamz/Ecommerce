@@ -91,6 +91,7 @@ public void loadProducts() {
             }
         });
 }
+
 2. Shopping Cart (Room Persistence)
 java// CartRepository.java
 public void insert(CartItem cartItem) {
@@ -105,6 +106,7 @@ javaprivate void filterProducts(String query) {
         .collect(Collectors.toList());
     adapter.setProducts(filtered);
 }
+
 4. Configuration Change Handling
 java@Override
 public void onConfigurationChanged(Configuration newConfig) {
