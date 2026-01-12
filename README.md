@@ -15,8 +15,10 @@ Aplikasi E-Commerce Android dengan fitur katalog produk, keranjang belanja, dan 
 
 
 ✨ Architecture
+```
 MVVM (Model-View-ViewModel) Pattern:
 View (Activity) → ViewModel → Repository → Data Source (Room/Retrofit)
+```
 Layer Structure:
 
 Presentation: Activity, Fragment, ViewModel, Adapter
@@ -64,11 +66,13 @@ Android Studio Android Studio Otter 2 Feature Drop | 2025.2.2 Patch 1
 JDK 17+
 Android SDK 25+
 Gradle 8.0+
-
+```
 Installation:
 bash git clone https://github.com/rizazamz/Ecommerce.git
 cd ecommerce-app
+
 # Open in Android Studio → Sync Gradle → Run
+```
 Configuration:
 
 API Base URL: https://dummyjson.com/
@@ -77,7 +81,9 @@ Page Size: 20 items
 
 
 📱 Key Features Implementation
+
 1. Product Catalog (Pagination)
+```
 java// ProductViewModel.java
 private int currentSkip = 0;
 private static final int PAGE_SIZE = 20;
@@ -91,34 +97,40 @@ public void loadProducts() {
             }
         });
 }
+```
 
 2. Shopping Cart (Room Persistence)
+```
 java// CartRepository.java
 public void insert(CartItem cartItem) {
     executorService.execute(() -> cartDao.insert(cartItem));
 }
 
 // Data saved at: /data/data/com.riza.ecommerce/databases/
+```
 3. Search (Client-Side Filtering)
+```
 javaprivate void filterProducts(String query) {
     List<Product> filtered = allProducts.stream()
         .filter(p -> p.getTitle().toLowerCase().contains(query.toLowerCase()))
         .collect(Collectors.toList());
     adapter.setProducts(filtered);
 }
-
-4. Configuration Change Handling
+```
+5. Configuration Change Handling
+```
 java@Override
 public void onConfigurationChanged(Configuration newConfig) {
     super.onConfigurationChanged(newConfig);
     int columns = getResources().getInteger(R.integer.product_grid_columns);
     layoutManager.setSpanCount(columns);
 }
-
+```
 🧪 Testing
+```
 Run Tests:
 bash./gradlew test                    # Unit tests
-
+```
 Test Cases:
 
 Pagination: No duplicate items
@@ -138,12 +150,19 @@ values-land/ - Landscape
 
 
 🌐 API Endpoints
+```
 Base URL: https://dummyjson.com/
+```
 Get Products:
+```
 httpGET /products?limit=20&skip=0
+```
 Get Product Detail:
+```
 httpGET /products/{id}
+```
 Response Example:
+```
 json{
   "products": [{
     "id": 1,
@@ -154,7 +173,7 @@ json{
   }],
   "total": 194
 }
-
+```
 🔐 Data Persistence
 Room Database Schema:
 sqlCREATE TABLE cart_items (
@@ -168,8 +187,9 @@ sqlCREATE TABLE cart_items (
 ```
 
 **Storage Location:**
-```
 /data/data/com.riza.ecommerce/databases/ecommerce_database
+```
+
 
 🎨 Design Patterns
 
@@ -188,6 +208,7 @@ Singleton: Database instance
 ✅ RecyclerView view recycling
 
 📄 Dependencies
+```
 gradle// Architecture Components
 implementation 'androidx.lifecycle:lifecycle-viewmodel:2.8.4'
 implementation 'androidx.lifecycle:lifecycle-livedata:2.8.4'
@@ -211,7 +232,7 @@ testImplementation 'junit:junit:4.13.2'
 testImplementation 'org.mockito:mockito-core:5.12.0'
 testImplementation 'androidx.arch.core:core-testing:2.2.0'
 testImplementation 'com.squareup.okhttp3:mockwebserver:4.12.0'
-
+```
 👨‍💻 Author
 Riza Zamzami
 
