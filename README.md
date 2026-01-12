@@ -2,16 +2,16 @@ E-Commerce Android Application
 Aplikasi E-Commerce Android dengan fitur katalog produk, keranjang belanja, dan profil user. Dibangun menggunakan MVVM Architecture, Room Database, dan Retrofit.
 
 ✨ Features
-✅ Product catalog dengan pagination & search
-✅ Product detail dengan add to cart
-✅ Shopping cart dengan persistent storage (Room)
-✅ Update quantity & delete items
-✅ Checkout dengan kalkulasi total + shipping
-✅ User profile page
-✅ Splash screen 
-✅ Pull to refresh & error handling
-✅ Bottom navigation
-✅ Responsive design (portrait & landscape)
+-  [x] Product catalog dengan pagination & search
+-  [x] Product detail dengan add to cart
+-  [x] Shopping cart dengan persistent storage (Room)
+-  [x] Update quantity & delete items
+-  [x] Checkout dengan kalkulasi total + shipping
+-  [x] User profile page
+-  [x] Splash screen 
+-  [x] Pull to refresh & error handling
+-  [x] Bottom navigation
+-  [x] Responsive design (portrait & landscape)
 
 
 ✨ Architecture
@@ -21,51 +21,45 @@ View (Activity) → ViewModel → Repository → Data Source (Room/Retrofit)
 ```
 Layer Structure:
 
-Presentation: Activity, Fragment, ViewModel, Adapter
-Domain: Model (Business entities)
-Data: Repository, Local (Room), Remote (Retrofit)
+- Presentation: Activity, Fragment, ViewModel, Adapter
+- Domain: Model (Business entities)
+- Data: Repository, Local (Room), Remote (Retrofit)
 
 
 📦 Tech Stack
 Core:
-
-Language: Java 17
-Min SDK: 25 (Android 7.0)
-Target SDK: 36
+- Language: Java 17
+- Min SDK: 25 (Android 7.0)
+- Target SDK: 36
 
 Architecture Components:
-
-ViewModel & LiveData
-Room Database 2.6.1
-View Binding
+- ViewModel & LiveData
+- Room Database 2.6.1
+- View Binding
 
 Networking:
-
-Retrofit 2.11.0
-Gson Converter
-OkHttp 4.12.0
+- Retrofit 2.11.0
+- Gson Converter
+- OkHttp 4.12.0
 
 UI/UX:
-
-Material Design 3
-Glide 4.16.0
-SwipeRefreshLayout
-RecyclerView
+- Material Design 3
+- Glide 4.16.0
+- SwipeRefreshLayout
+- RecyclerView
 
 Testing:
-
-JUnit 4.13.2
-Mockito 5.12.0
-Architecture Testing
-MockWebServer
+- JUnit 4.13.2
+- Mockito 5.12.0
+- Architecture Testing
 
 🚀 Getting Started
 Prerequisites:
 
-Android Studio Android Studio Otter 2 Feature Drop | 2025.2.2 Patch 1
-JDK 17+
-Android SDK 25+
-Gradle 8.0+
+- Android Studio Android Studio Otter 2 Feature Drop | 2025.2.2 Patch 1
+- JDK 17+
+- Android SDK 25+
+- Gradle 8.0+
 ```
 Installation:
 bash git clone https://github.com/rizazamz/Ecommerce.git
@@ -75,9 +69,9 @@ cd ecommerce-app
 ```
 Configuration:
 
-API Base URL: https://dummyjson.com/
-Database Name: ecommerce_database
-Page Size: 20 items
+- API Base URL: https://dummyjson.com/
+- Database Name: ecommerce_database
+- Page Size: 20 items
 
 
 📱 Key Features Implementation
@@ -133,21 +127,14 @@ bash./gradlew test                    # Unit tests
 ```
 Test Cases:
 
-Pagination: No duplicate items
-Cart Persistence: Data tetap ada setelah restart
-Total Calculation: Subtotal + shipping benar
-Error 500: Error handling dengan retry button
+- Pagination: No duplicate items
+- Cart Persistence: Data tetap ada setelah restart
+- Total Calculation: Subtotal + shipping benar
+- Error 500: Error handling dengan retry button
 
 
 📊 Responsive Design
 DeviceOrientationGrid ColumnsPhonePortrait2PhoneLandscape3Tablet 7"Portrait3Tablet 10"Portrait4Tablet 10"Landscape5
-Resource Qualifiers:
-
-values/ - Phone portrait (default)
-values-sw600dp/ - Tablet 7"
-values-sw720dp/ - Tablet 10"
-values-land/ - Landscape
-
 
 🌐 API Endpoints
 ```
@@ -175,7 +162,9 @@ json{
 }
 ```
 🔐 Data Persistence
+
 Room Database Schema:
+```
 sqlCREATE TABLE cart_items (
     productId INTEGER PRIMARY KEY,
     title TEXT,
@@ -184,7 +173,6 @@ sqlCREATE TABLE cart_items (
     quantity INTEGER,
     stock INTEGER
 )
-```
 
 **Storage Location:**
 /data/data/com.riza.ecommerce/databases/ecommerce_database
@@ -193,19 +181,19 @@ sqlCREATE TABLE cart_items (
 
 🎨 Design Patterns
 
-MVVM: Separation of UI and business logic
-Repository: Single source of truth
-Observer: LiveData reactive updates
-Singleton: Database instance
+- MVVM: Separation of UI and business logic
+- Repository: Single source of truth
+- Observer: LiveData reactive updates
+- Singleton: Database instance
 
 
 📈 Performance Optimization
 
-✅ Glide image caching (memory + disk)
-✅ Room async operations (ExecutorService)
-✅ ViewModel lifecycle-aware
-✅ ViewBinding (no findViewById)
-✅ RecyclerView view recycling
+- [x] Glide image caching (memory + disk)
+- [x] Room async operations (ExecutorService)
+- [x] ViewModel lifecycle-aware
+- [x] ViewBinding 
+- [x] RecyclerView view recycling
 
 📄 Dependencies
 ```
@@ -236,29 +224,28 @@ testImplementation 'com.squareup.okhttp3:mockwebserver:4.12.0'
 👨‍💻 Author
 Riza Zamzami
 
-Role: Junior Mobile Developer
-Email: rizazamzami12@gmail.com
-Location: Jakarta, Indonesia
-
+- Role: Junior Mobile Developer
+- Email: rizazamzami12@gmail.com
+- Location: Jakarta, Indonesia
 
 🙏 Acknowledgments
 
-DummyJSON - Free API
-Material Design - Design system
-Glide - Image loading
+- DummyJSON - Free API
+- Material Design - Design system
+- Glide - Image loading
 
 📞 Support
 
-GitHub Issues: Create Issue
-Email: rizazamzami12@gmail.com
+- GitHub Issues: Create Issue
+- Email: rizazamzami12@gmail.com
 
 
 📝 Changelog
 v1.0.0 (2026-01-12)
 
-Initial release
-Product catalog with pagination
-Shopping cart with Room persistence
-Search functionality
-Responsive design
-Unit tests coverage
+- Initial release
+- Product catalog with pagination
+- Shopping cart with Room persistence
+- Search functionality
+- Responsive design
+- Unit tests 
